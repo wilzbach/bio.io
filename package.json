@@ -6,6 +6,7 @@
   "browser": {
     "request": "xhr"
   },
+  "keywords": ["biological", "format", "parser"],
   "dependencies": {
     "request": "^2.72.0",
     "vow": "^0.4.12",
@@ -29,6 +30,6 @@
     "test": "babel -d lib src && tape test/tape/*.js && mocha -C --recursive test/mocha",
     "watch": "node ./node_modules/webpack/bin/webpack.js -w"
   },
-  "author": "Sebastian Wilzbach <sebi.wilzbach@gmail.com>",
+  "author": "Sebastian Wilzbach <greeenify@gmail.com>",
   "license": "MIT"
 }
