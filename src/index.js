@@ -7,6 +7,10 @@ export newick from "./newick";
 export parser from "./parser";
 export seqs from "./seqs";
 
+// convenience export
+const xhr = require("xhr");
+export {xhr};
+
 // version will be automatically injected by webpack
 // IO_VERSION is only defined if loaded via webpack
 var VERSION = "imported";
