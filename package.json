@@ -1,12 +1,16 @@
 {
   "name": "bio.io",
-  "version": "1.0.0",
+  "version": "1.0.5",
   "description": "Biological parsers",
   "main": "lib/index.js",
   "browser": {
     "request": "xhr"
   },
-  "keywords": ["biological", "format", "parser"],
+  "keywords": [
+    "biological",
+    "format",
+    "parser"
+  ],
   "dependencies": {
     "request": "^2.72.0",
     "vow": "^0.4.12",

@@ -1,4 +1,5 @@
-export blast from "./blast";
+// TODO: make BLAST slim
+//export blast from "./blast";
 export clustal from "./clustal";
 export fasta from "./fasta";
 export gff from "./gff";

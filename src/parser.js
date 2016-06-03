@@ -1,6 +1,4 @@
 const xhr = require('request');
-const vow = require('vow');
-
 const GenericReader = {};
 
 export default GenericReader;
@@ -14,16 +12,16 @@ GenericReader.read = function(url, callback) {
   })(this);
 
   if(typeof callback === "undefined"){
-    const prom = vow.defer();
-    callback = function(err, res){
-      if(err){
-        prom.reject(err);
-      }else{
-        prom.resolve(res);
-      }
-    };
-    xhr(url, onret);
-    return prom.promise();
+    return new Promise((resolve, reject) => {
+      callback = function(err, res){
+        if (err){
+          reject(err);
+        } else {
+          resolve(res);
+        }
+      };
+      xhr(url, onret);
+    });
   }else{
     return xhr(url, onret);
   }
