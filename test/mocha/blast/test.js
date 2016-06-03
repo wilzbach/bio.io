@@ -14,7 +14,7 @@ var assert = chai.assert;
 var equal = assert.equal;
 
 // requires your main app (specified in index.js)
-var blast = require("../").blast;
+var blast = require("../../../lib/blast").default;
 
 describe('NCBI format', function(){
   var result,hits;
