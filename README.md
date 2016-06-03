@@ -2,7 +2,7 @@
 
 Collection of JavaScript module to parse biological formats.
 
-[![NPM version](http://img.shields.io/npm/v/msa-seqtools.svg)](https://www.npmjs.org/package/msa-seqtools) 
+[![NPM version](http://img.shields.io/npm/v/bio.io.svg)](https://www.npmjs.org/package/bio.io) 
 [![Build Status](https://travis-ci.org/wilzbach/bio.io.svg?branch=master)](https://travis-ci.org/wilzbach/bio.io)
 
 ### Gotchas
