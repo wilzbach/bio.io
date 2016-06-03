@@ -1,6 +1,6 @@
 {
   "name": "bio.io",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "Biological parsers",
   "main": "lib/index.js",
   "browser": {
