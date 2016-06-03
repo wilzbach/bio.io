@@ -1,0 +1,34 @@
+{
+  "name": "bio.io",
+  "version": "1.0.0",
+  "description": "Biological parsers",
+  "main": "lib/index.js",
+  "browser": {
+    "request": "xhr"
+  },
+  "dependencies": {
+    "request": "^2.72.0",
+    "vow": "^0.4.12",
+    "xhr": "^2.2.0",
+    "xmldoc": "^0.5.1"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.9.0",
+    "babel-loader": "^6.2.4",
+    "babel-plugin-transform-export-extensions": "^6.8.0",
+    "babel-preset-es2015": "^6.9.0",
+    "chai": "^3.5.0",
+    "mocha": "^2.5.3",
+    "nock": "^8.0.0",
+    "should": "^9.0.0",
+    "tape": "^4.5.1",
+    "webpack": "^1.13.1"
+  },
+  "scripts": {
+    "prepublish": "babel -d lib src",
+    "test": "babel -d lib src && tape test/tape/*.js && mocha -C --recursive test/mocha",
+    "watch": "node ./node_modules/webpack/bin/webpack.js -w"
+  },
+  "author": "Sebastian Wilzbach <sebi.wilzbach@gmail.com>",
+  "license": "MIT"
+}
