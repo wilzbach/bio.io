@@ -81,6 +81,9 @@ export default Clustal = {
       }
     }
 
+    //remove ill-parsed consensus symbols
+    seqs = seqs.filter(s => s.seq.search(/[:.*]/i) === -1 && s.name.search(/[:.*]/i) === -1);
+
     return seqs;
   }
 };

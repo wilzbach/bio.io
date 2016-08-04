@@ -32,6 +32,22 @@ it("test with fs", function(done) {
     assert.equal(seqs.length, 34, "invalid seq length" + seqs.length);
     done();
   });
-
 });
+
+it('should deal with consensus symbols properly', function(done){
+  fs.readFile(__dirname + '/clustalw66638.aln.txt', 'utf8', function(err, data){
+    if (err) {
+      return console.log(err);
+    }
+    var seqs = Clustal.parse(data);
+
+    seqs.forEach(function(s){
+      assert.equal(s.seq.search(/[:.*]/i), -1, 'consensus symbol in sequence');
+      assert.equal(s.name.search(/[:.*]/i), -1, 'consensus symbol in seq name');
+    });
+
+    done();
+  });
+});
+
 });
